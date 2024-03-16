@@ -24,12 +24,16 @@ const MainsScreen = () => {
       <View style={styles.wordDayContainer}>
         <Text style={styles.text}>Words of the day</Text>
         <View style={styles.noteContainer}>
+          <View style={styles.noteLeft} />
           <Text style={styles.text1}>баярлалаа</Text>
+          <View />
         </View>
         <View style={styles.noteContainer}>
+          <View style={styles.noteLeft} />
           <Text style={styles.text1}>сэдьхэл</Text>
         </View>
         <View style={styles.noteContainer}>
+          <View style={styles.noteLeft} />
           <Text style={styles.text1}>эрхэ</Text>
         </View>
       </View>
@@ -55,8 +59,16 @@ const styles = StyleSheet.create({
   noteContainer: {
     backgroundColor: '#2b2f37',
     borderRadius: 16,
-    padding: 5,
-    paddingVertical: 7,
+    flexDirection: 'row',
+    height: 40,
+    alignItems: 'center',
+    gap: 10,
+  },
+  noteLeft: {
+    width: 40,
+    height: 40,
+    backgroundColor: '#2e323a',
+    borderRadius: 40 / 2,
   },
   left: {gap: 10},
   text: {color: '#f0f2f8', fontFamily: 'Rubik-Regular', fontSize: 30},
