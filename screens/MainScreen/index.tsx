@@ -24,25 +24,46 @@ const MainsScreen = () => {
 
       <View style={styles.wordDayContainer}>
         <Text style={styles.text}>Words of the day</Text>
+
         <View style={styles.noteContainer}>
           <View style={styles.noteLeft}>
             <Icon name="bookmark-outline" color="#52565e" size={20} />
           </View>
-          <Text style={styles.text1}>баярлалаа</Text>
-          <View />
+          <View style={styles.noteCenter}>
+            <Text style={styles.text1}>баярлалаа</Text>
+          </View>
+          <View style={styles.noteRight}>
+            <Icon name="bookmark-outline" color="#f0f2f8" size={25} />
+          </View>
         </View>
+
         <View style={styles.noteContainer}>
           <View style={styles.noteLeft}>
             <Icon name="bookmark-outline" color="#52565e" size={20} />
           </View>
-          <Text style={styles.text1}>сэдьхэл</Text>
+          <View style={styles.noteCenter}>
+            <Text style={styles.text1}>сэдьхэл</Text>
+          </View>
+          <View style={styles.noteRight}>
+            <Icon name="bookmark-outline" color="#f0f2f8" size={25} />
+          </View>
         </View>
+
         <View style={styles.noteContainer}>
           <View style={styles.noteLeft}>
             <Icon name="bookmark-outline" color="#52565e" size={20} />
           </View>
-          <Text style={styles.text1}>эрхэ</Text>
+          <View style={styles.noteCenter}>
+            <Text style={styles.text1}>эрхэ</Text>
+          </View>
+          <View style={styles.noteRight}>
+            <Icon name="bookmark-outline" color="#f0f2f8" size={25} />
+          </View>
         </View>
+      </View>
+
+      <View style={styles.wordDayContainer}>
+        <Text style={styles.text}>My Progress</Text>
       </View>
     </View>
   );
@@ -67,6 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2b2f37',
     borderRadius: 16,
     flexDirection: 'row',
+    justifyContent: 'space-between',
     height: 40,
     alignItems: 'center',
     gap: 10,
@@ -78,6 +100,16 @@ const styles = StyleSheet.create({
     borderRadius: 40 / 2,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  noteCenter: {flex: 1},
+  noteRight: {
+    height: 40,
+    borderRadius: 40 / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#616874',
+    width: 45,
+    elevation: 30,
   },
   left: {gap: 10},
   text: {color: '#f0f2f8', fontFamily: 'Rubik-Regular', fontSize: 30},
