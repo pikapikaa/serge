@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const MainsScreen = () => {
   return (
@@ -24,16 +25,22 @@ const MainsScreen = () => {
       <View style={styles.wordDayContainer}>
         <Text style={styles.text}>Words of the day</Text>
         <View style={styles.noteContainer}>
-          <View style={styles.noteLeft} />
+          <View style={styles.noteLeft}>
+            <Icon name="bookmark-outline" color="#52565e" size={20} />
+          </View>
           <Text style={styles.text1}>баярлалаа</Text>
           <View />
         </View>
         <View style={styles.noteContainer}>
-          <View style={styles.noteLeft} />
+          <View style={styles.noteLeft}>
+            <Icon name="bookmark-outline" color="#52565e" size={20} />
+          </View>
           <Text style={styles.text1}>сэдьхэл</Text>
         </View>
         <View style={styles.noteContainer}>
-          <View style={styles.noteLeft} />
+          <View style={styles.noteLeft}>
+            <Icon name="bookmark-outline" color="#52565e" size={20} />
+          </View>
           <Text style={styles.text1}>эрхэ</Text>
         </View>
       </View>
@@ -69,6 +76,8 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: '#2e323a',
     borderRadius: 40 / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   left: {gap: 10},
   text: {color: '#f0f2f8', fontFamily: 'Rubik-Regular', fontSize: 30},
