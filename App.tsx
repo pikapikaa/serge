@@ -9,6 +9,7 @@ import {
 import MainScreen from './screens/MainScreen';
 import MainTabBar from './routes/MainTabBar';
 import ProfileScreen from './screens/ProfileScreen';
+import BookmarkScreen from './screens/BookmarkScreen';
 
 // const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,6 +23,11 @@ function App(): React.JSX.Element {
         <Tab.Screen
           name="Home"
           component={MainScreen}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Bookmark"
+          component={BookmarkScreen}
           options={{headerShown: false}}
         />
         <Tab.Screen
